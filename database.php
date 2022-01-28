@@ -7,8 +7,7 @@
     require_once __DIR__ . '/Marshall.php';
     require_once __DIR__ . '/Sharp.php';
     require_once __DIR__ . '/MSI.php';
-    require_once __DIR__ . '/Marco.php';
-    require_once __DIR__ . '/Mary.php';
+    require_once __DIR__ . '/User.php';
 
     // Creazione oggetti
     $products_list = new ProductsList();
