@@ -1,9 +1,12 @@
 <?php
     require_once __DIR__ . '/Device.php';
 
-    class Samsung extends Device{
+    class Sony extends Device{
 
-        // Samsung deve avere come campo obbligatorio anche il modello
+        // Valori aggiunti alla classe Device
+        public $size;
+
+        // Sony deve avere come campo obbligatorio anche il modello
         public function __construct($_name, $_price, $_model){
             parent::__construct($_name, $_price);
             $this->model = $_model;

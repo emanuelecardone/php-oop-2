@@ -26,6 +26,11 @@
                 'left' => $this->left
             ];
 
+            // Push per i prodotti che hanno caratteristiche in più
+            if(isset($this->size)){
+                $info_array['size'] = $this->size;
+            }
+
             return $info_array;
         }
     }
