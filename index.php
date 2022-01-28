@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
-<body>
-    <h1>Test</h1>
+<body class="bg-dark w-100 vh-100">
+    
+    <?php include __DIR__ . '/partials/header.php'; ?>
+    <?php include __DIR__ . '/partials/main.php'; ?>
 
     <script type="text/javascript" src="js/script.js"></script>
 </body>
