@@ -10,6 +10,7 @@
         public $user_country;
 
         protected $user_discount;
+        protected $user_shopping_cart = [];
 
         // Campi obbligatori
         public function __construct($_user_name, $_user_lastname, $_user_email){
@@ -23,7 +24,18 @@
             $this->user_discount = $this->user_status === 'Premium' ? 25 : 0;
         }
 
+        // Funzione per riempire il carrello utente (verrà riempito solo con nome, modello e prezzo in quanto ho già stampato tutte le info del prodotto all'inizio della pagina)
+        public function fillShoppingCartUp($product_name, $product_model, $product_price){
+            $this->user_shopping_cart[] = $product_name . ' ' . $product_model . ' | ' . $product_price . '$';
+        }
+
+        // Funzione per mostrare il carrello utente
+        public function showShoppingCart(){
+            return $this->user_shopping_cart;
+        }
+
         // Funzione per ritornare le informazioni come array
+        // Non ritorno il carrello in quanto lo stamperò in pagina successivamente
         public function showAllUser(){
             $info_array = [
                 'name' => $this->user_name,

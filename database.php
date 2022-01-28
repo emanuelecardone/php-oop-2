@@ -62,13 +62,17 @@
     $marco->user_status = 'Premium';
     $marco->user_country = 'Italy';
     $marco->setDiscount();
+    $marco->fillShoppingCartUp($samsung_s20->name, $samsung_s20->model, $samsung_s20->price);
+    $marco->fillShoppingCartUp($msi_desktop->name, $msi_desktop->model, $msi_desktop->price);
 
     // Mary
     $mary->user_age = 37;
     $mary->user_status = 'Normal';
     $mary->user_country = 'USA';
     $mary->setDiscount();
-
+    $mary->fillShoppingCartUp($sony_a80j->name, $sony_a80j->model, $sony_a80j->price);
+    $mary->fillShoppingCartUp($marshall_stanmore->name, $marshall_stanmore->model, $marshall_stanmore->price);
+    $mary->fillShoppingCartUp($msi_desktop->name, $msi_desktop->model, $msi_desktop->price);
 
 
     // Push nella lista prodotti
