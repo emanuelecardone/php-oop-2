@@ -1,21 +1,27 @@
 <?php
     // Sezione generica in cui si richiamano le classi e vengono assegnati i singoli valori agli oggetti
     require_once __DIR__ . '/ProductsList.php';
+    require_once __DIR__ . '/UsersList.php';
     require_once __DIR__ . '/Samsung.php';
     require_once __DIR__ . '/Sony.php';
     require_once __DIR__ . '/Marshall.php';
     require_once __DIR__ . '/Sharp.php';
     require_once __DIR__ . '/MSI.php';
+    require_once __DIR__ . '/Marco.php';
+    require_once __DIR__ . '/Mary.php';
 
     // Creazione oggetti
     $products_list = new ProductsList();
+    $users_list = new UsersList();
     $samsung_s20 = new Samsung('Samsung', 800, 'S-20');
     $sony_a80j = new Sony('Sony', 1500, 'A80J');
     $marshall_stanmore = new Marshall('Marshall', 250);
     $sharp_calculator = new Sharp('Sharp', 25);
     $msi_desktop = new MSI('MSI', 1900);
+    $marco = new User('Marco', 'Meroli', 'marcomeroli@gmail.com');
+    $mary = new User('Mary', 'Shaon', 'maryshaon@gmail.com');
 
-    // Attribuzione valori
+    // Attribuzione valori prodotti
     // Samsung
     $samsung_s20->color = 'Black';
     $samsung_s20->type = 'Phone';
@@ -49,10 +55,30 @@
     $msi_desktop->ram = 16;
     $msi_desktop->usb = 'C';
 
+
+    // Attribuzione valori utenti
+    // Marco
+    $marco->user_age = 25;
+    $marco->user_status = 'Premium';
+    $marco->user_country = 'Italy';
+    $marco->setDiscount();
+
+    // Mary
+    $mary->user_age = 37;
+    $mary->user_status = 'Normal';
+    $mary->user_country = 'USA';
+    $mary->setDiscount();
+
+
+
     // Push nella lista prodotti
     $products_list->list[] = $samsung_s20;
     $products_list->list[] = $sony_a80j;
     $products_list->list[] = $marshall_stanmore;
     $products_list->list[] = $sharp_calculator;
     $products_list->list[] = $msi_desktop;
+
+    // Push nella lista utenti
+    $users_list->people_list[] = $marco;
+    $users_list->people_list[] = $mary;
 ?>
