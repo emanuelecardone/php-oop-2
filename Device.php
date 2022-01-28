@@ -30,6 +30,15 @@
             if(isset($this->size)){
                 $info_array['size'] = $this->size;
             }
+            if(isset($this->weight)){
+                $info_array['weight'] = $this->weight;
+            }
+            if(isset($this->ram)){
+                $info_array['ram'] = $this->ram;
+            }
+            if(isset($this->usb)){
+                $info_array['usb'] = $this->usb;
+            }
 
             return $info_array;
         }
