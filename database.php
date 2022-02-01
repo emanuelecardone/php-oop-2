@@ -16,7 +16,16 @@
     $sony_a80j = new Sony('Sony', 1500, 'A80J');
     $marshall_stanmore = new Marshall('Marshall', 250);
     $sharp_calculator = new Sharp('Sharp', 25);
-    $msi_desktop = new MSI('MSI', 1900);
+
+    // Errore per msi (da cambiare il 1700 con una stringa per test)
+    try{
+        $msi_desktop = new MSI('MSI', 1700);
+    } catch(Exception $e){
+        error_log($e);
+        echo $e->getMessage();
+        die();
+    }
+
     $marco = new User('Marco', 'Meroli', 'marcomeroli@gmail.com');
     $mary = new User('Mary', 'Shaon', 'maryshaon@gmail.com');
 
